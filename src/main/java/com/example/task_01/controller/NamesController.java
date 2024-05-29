@@ -1,5 +1,6 @@
 package com.example.task_01.controller;
 
+import com.example.task_01.models.Celebration;
 import com.example.task_01.models.Greeting;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,11 +21,25 @@ public class NamesController {
 //            return String.format("Good afternoon %s!", name);
 //        }
 //    }
+//
+//    // POJO
+//    @GetMapping
+//    public Greeting greeting(){
+//        Greeting greeting = new Greeting("Faith", "afternoon");
+//        return greeting;
+//    }
 
-    @GetMapping
-    public Greeting greeting(){
-        Greeting greeting = new Greeting("Faith", "afternoon");
-        return greeting;
+//    // GET request
+//    @GetMapping
+//    public String timeOfDay(@RequestParam String timeOfDay){
+//        return timeOfDay;
+//    }
+
+    // GET REQUEST
+    @GetMapping(value = "/summer")
+    public Celebration celebration(){
+        Celebration celebration = new Celebration("Happy summer solstice!");
+        return celebration;
     }
 
 }

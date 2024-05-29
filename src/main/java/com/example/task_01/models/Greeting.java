@@ -14,7 +14,7 @@ public class Greeting {
         return this.name;
     }
 
-    public void setName(){
+    public void setName(String name){
         this.name = name;
     }
 
@@ -22,7 +22,7 @@ public class Greeting {
         return this.timeOfDay;
     }
 
-    public void setTimeOfDay(){
+    public void setTimeOfDay(String timeOfDay){
         this.timeOfDay = timeOfDay;
     }
 
